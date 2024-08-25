@@ -24,7 +24,7 @@ function App() {
 
       <Container sx={{mt:10}} maxWidth="md">
         <Grid container spacing={0}>
-          <Grid item md={3} sm={12}>
+          <Grid item sm={3} xs={12}>
 
             <AvatarP/>
             <Divider sx={{my:5.5}}/>
@@ -36,8 +36,8 @@ function App() {
             <Divider sx={{my:5.5}}/>
 
           </Grid>
-          <Grid item md={1} sm={0}/>
-          <Grid item md={8} sm={12}>
+          <Grid item sm={1} xs={0}/>
+          <Grid item sm={8} xs={12}>
             <Contact/>
             <Divider sx={{my:5.5}}/>
             <About/>
