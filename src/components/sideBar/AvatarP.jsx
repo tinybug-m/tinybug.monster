@@ -8,7 +8,7 @@ import { Box } from '@mui/material'
 function AvatarP() {
   return (
     <Box>
-        <Avatar variant="circular" src="../../../public/profile.jpg" alt="" sx={{ width: 186.5, height: 186.5,mb:5.5 }} />
+        <Avatar variant="circular" src="./profile.jpg" alt="" sx={{ width: 186.5, height: 186.5,mb:5.5 }} />
         <Typography variant="h4" sx={{fontSize: '2.5rem' ,width: {sm: '100%',md:'100px'}}} color="initial">Arshia Ranjbar</Typography>
         <Typography variant="h4" sx={{fontSize: '2.5rem'}} color="initial"></Typography>
 
