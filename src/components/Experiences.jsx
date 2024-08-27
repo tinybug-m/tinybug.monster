@@ -68,7 +68,6 @@ function Experiences() {
                         <li style={{marginBottom:'16px'}}>
                             <Typography variant="body1" color="initial">{exprience.date}</Typography>
                             <Typography variant="body1" fontWeight={800} color="initial">{exprience.title}</Typography>
-                            <Typography variant="body1"  color="initial">{exprience.position}</Typography>
                             <Typography variant="body1" mb={2} color="initial">{exprience.position}</Typography>
                             <Typography variant="body1" mb={2} color="initial">{exprience.desc}</Typography>
                             {
