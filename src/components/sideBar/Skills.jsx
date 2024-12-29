@@ -6,9 +6,9 @@ function Skills() {
     const [Skills, setSkills] = useState([
         "React JS",
         "Javascript",
+        "Jest",
         "Tailwind",
         "Mui",
-        "Gitlab",
         "Swagger",
         "Jira",
         "Figma",
@@ -19,9 +19,11 @@ function Skills() {
 
         <Box>
             <Typography variant="h5" mb={2} color="initial">Skills</Typography>
-            <ul className='normalUL' >
-                {Skills.map(Skill => {
-                    return <li><Typography variant="body1" color="initial">{Skill}</Typography></li>
+            <ul className='normalUl' >
+                {Skills.map((Skill, index) => {
+                    return <li key={`Skill-${index}`}>
+                        <Typography variant="body1" color="initial">{Skill}</Typography>
+                    </li>
                 })}
             </ul>
 

@@ -1,12 +1,10 @@
 import React, { lazy, Suspense, useState } from 'react'
 import Typography from '@mui/material/Typography'
-import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
-import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
-import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
+
 import { Box } from '@mui/material';
 
 function Contact() {
-  const [contactList, setContactList] = useState([
+  const [contactList] = useState([
     {
       icon: 'phone',
       text: '+98 996 640 5896'
@@ -39,10 +37,10 @@ function Contact() {
 
 
       <Typography variant="h5" mb={4} color="initial">Contact</Typography>
-      {contactList.map(contact => {
+      {contactList.map((contact,index) => {
         const Icon = getIcon(contact.icon);
         return (
-          <Box sx={{display:'flex',gap:1,mb:2}}>
+          <Box key={`contact-${index}`} sx={{display:'flex',gap:1,mb:2}}>
             <Suspense fallback={<div>Loading...</div>}>
               <Icon />
             </Suspense>

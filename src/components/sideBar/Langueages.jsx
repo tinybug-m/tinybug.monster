@@ -21,10 +21,10 @@ function Langueages() {
     return (
         <Box>
             <Typography variant="h5" color="initial">Languages</Typography>
-            <ul className='normalUL'>
-                {languages.map(lang => {
+            <ul className='normalUl'>
+                {languages.map((lang, index) => {
                     return (
-                        <li>
+                        <li key={`language-${index}`}>
                             <Typography variant="body1" display={'inline-block'} fontWeight={800} color="initial">{lang.name} - </Typography>
                             <Typography variant="body1" ml={0.5} display={'inline-block'} fontWeight={300} color="initial"> {lang.level}</Typography>
                         </li>

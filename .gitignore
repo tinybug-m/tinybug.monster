@@ -1,0 +1,28 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+bower_components/
+
+# Environment variables
+.env
+
+# Build outputs
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.swp
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.idea/
+.vscode/
+*.iml

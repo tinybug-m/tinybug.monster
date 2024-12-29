@@ -4,6 +4,19 @@ import React, { useState } from 'react'
 function Experiences() {
     const [expriences, setExpriences] = useState([
         {
+            date: 'Dec 2024 - Present · 1 mos',
+            title: 'S-UI Telegram bot',
+            position: 'Software Developer',
+            desc: 'Built a Telegram bot to manage payments, user configurations, and a referral system, improving user experience and panel administration. Focused on clean code practices and learned test-driven development.',
+            refrences: [
+                {
+                    name: 'GitHub Repository',
+                    url: 'https://github.com/tinybug-m/SUI-BOT'
+                }
+            ]
+
+        },
+        {
             date: 'Oct 2023 - Present · 7',
             title: 'MaminAudio',
             position: 'Freelance',
@@ -63,16 +76,19 @@ function Experiences() {
         <Box>
             <Typography variant="h5" mb={4} color="initial">Experience</Typography>
             <ul>
-                {expriences.map(exprience => {
+                {expriences.map((exprience, index) => {
                     return (
-                        <li style={{marginBottom:'16px'}}>
+                        <li key={`exprience-${index}`} style={{ marginBottom: '24px' }}>
                             <Typography variant="body1" color="initial">{exprience.date}</Typography>
                             <Typography variant="body1" fontWeight={800} color="initial">{exprience.title}</Typography>
                             <Typography variant="body1" mb={2} color="initial">{exprience.position}</Typography>
                             <Typography variant="body1" mb={2} color="initial">{exprience.desc}</Typography>
                             {
-                                exprience.refrences.length !== 0 && exprience.refrences.map(refrence=>{
-                                    return <Typography variant="body1" mb={0} color="initial"><Link href={refrence.url}>{refrence.name}</Link></Typography>
+                                exprience.refrences.length !== 0 &&
+                                exprience.refrences.map((refrence, i) => {
+                                    return <Typography key={`refrecnce-${index}-${i}`} variant="body1" mb={0} color="initial">
+                                        <Link href={refrence.url}>{refrence.name}</Link>
+                                    </Typography>
                                 })
                             }
 
